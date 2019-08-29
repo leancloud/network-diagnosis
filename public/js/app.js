@@ -93,6 +93,9 @@ $( document ).ready(function(){
     pingDomain('https://api.leancloud.cn/1.1/ping', '#lc_ping');
     pingDomain('https://us-api.leancloud.cn/1.1/ping', '#us_lc_ping');
     pingDomain('http://leanapp.cn/', '#lc_app_ping');
+    pingDomain('https://pxnn5aqv.api.lncld.net/1.1/ping', '#lc_api_cn_n1_ping');
+    pingDomain('https://urt0el3t.api.lncldapi.com/1.1/ping', '#lc_api_cn_e1_ping');
+    pingDomain('https://ol0cw6zl.api.lncldglobal.com/1.1/ping', '#lc_api_us_w1_ping');
     pingDomain('https://router-g0-push.leancloud.cn/v1/route?appId=PXnN5AqVpgEI4esrTLhoxUkd-gzGzoHsz', '#lc_push_router_ping');
     pingDomain('https://app-router.leancloud.cn/1/route?appId=test', '#lc_app_router_ping');
 
@@ -106,6 +109,7 @@ $( document ).ready(function(){
 
   var selectors = ["ip", 'location', 'browser', 'os' ,'ua',
                    'ls_status', 'lc_ping','us_lc_ping', 'lc_app_ping',
+                   'lc_api_cn_n1_ping', 'lc_api_cn_e1_ping', 'lc_api_us_w1_ping',
                    'lc_app_router_ping', 'lc_push_router_ping',
                    'qiniu_up_ping', 'qbox_up_ping',
                    '163_ping', 'sina_ping', 'baidu_ping'];
