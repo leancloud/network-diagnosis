@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>LeanCloud 诊断分析</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+  </head>
+  <body>
+    <div class='container'>
+      <h1>LeanCloud 诊断分析</h1>
+      <noscript>JavaScript 被禁用</noscript>
+      <div class='row'>
+        以下是您 IP 相关信息
+        <table class='table'>
+          <tr>
+            <td>您的 IP</td>
+            <td id='ip'><%= ip %></td>
+          </tr>
+          <tr>
+            <td>来自</td>
+            <td id='location'><%= location %></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class='row'>
+        以下是您操作系统和浏览器相关信息
+        <table class='table'>
+          <tr>
+            <td>操作系统</td>
+            <td id='os'></td>
+          </tr>
+          <tr>
+            <td>浏览器</td>
+            <td id='browser'></td>
+          </tr>
+          <tr>
+            <td>User Agent</td>
+            <td id='ua'></td>
+          </tr>
+          <tr>
+            <td>LocalStorage 状态</td>
+            <td id='ls_status'></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class='row'>
+        以下是 LeanCloud 域名的测试结果
+        <table class='table'>
+          <tr>
+            <td>leancloud.cn</td>
+            <td id='lc_ping'></td>
+          </tr>
+          <tr>
+            <td>us.leancloud.cn</td>
+            <td id='us_lc_ping'></td>
+          </tr>
+          <tr>
+            <td>leanapp.cn</td>
+            <td id='lc_app_ping'></td>
+          </tr>
+          <tr>
+            <td>App Router</td>
+            <td id='lc_app_router_ping'></td>
+          </tr>
+          <tr>
+            <td>Push Router</td>
+            <td id='lc_push_router_ping'></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class='row'>
+        以下是七牛域名的测试结果
+        <table class='table'>
+          <tr>
+            <td>up.qiniu.com</td>
+            <td id='qiniu_up_ping'></td>
+          </tr>
+          <tr>
+            <td>up.qbox.me</td>
+            <td id='qbox_up_ping'></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class='row'>
+        以下是常见国内域名的测试结果
+        <table class='table'>
+          <tr>
+            <td>163.com</td>
+            <td id='163_ping'></td>
+          </tr>
+          <tr>
+            <td>sina.com.cn</td>
+            <td id='sina_ping'></td>
+          </tr>
+          <tr>
+            <td>baidu.com</td>
+            <td id='baidu_ping'></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class='row'>
+        <table>
+          <tr>
+            <td><button id='save_btn'>保存结果</button></td>
+            <td id='saved_url'></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
