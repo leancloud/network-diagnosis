@@ -120,7 +120,7 @@ $( document ).ready(function(){
     pingDomain('http://www.sina.com.cn/', '#sina_ping');
     pingDomain('https://www.baidu.com/', '#baidu_ping');
 
-    pingWSS('wss://cn-n1-cell6.avoscloud.com', '#wss_cn_n1_ping');
+    pingWSS('wss://cn-n1-cell1.leancloud.cn', '#wss_cn_n1_ping');
     pingWSS('wss://us-w1-core-mesos-cell-3.leancloud.cn:5799/', '#wss_us_w1_ping');
   }
 
