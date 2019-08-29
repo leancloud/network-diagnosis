@@ -90,6 +90,20 @@ $( document ).ready(function(){
       });
     }
 
+    function pingWSS(site, selector) {
+      var start = Date.parse(new Date());
+
+      websocket = new WebSocket(site);
+      websocket.onopen = function(evt) {
+        var end = Date.parse(new Date());
+        console.log("start: " + start + ", end: " + end);
+        $(selector).text('正常，延迟 ' + (end - start) + ' 毫秒');
+      };
+      websocket.onerror = function(evt) {
+        $(selector).text('WSS Ping 失败');
+      };
+    }
+
     pingDomain('https://api.leancloud.cn/1.1/ping', '#lc_ping');
     pingDomain('https://us-api.leancloud.cn/1.1/ping', '#us_lc_ping');
     pingDomain('http://leanapp.cn/', '#lc_app_ping');
@@ -105,6 +119,9 @@ $( document ).ready(function(){
     pingDomain('http://www.163.com/', '#163_ping');
     pingDomain('http://www.sina.com.cn/', '#sina_ping');
     pingDomain('https://www.baidu.com/', '#baidu_ping');
+
+    pingWSS('wss://cn-n1-cell6.avoscloud.com', '#wss_cn_n1_ping');
+    pingWSS('wss://us-w1-core-mesos-cell-3.leancloud.cn:5799/', '#wss_us_w1_ping');
   }
 
   var selectors = ["ip", 'location', 'browser', 'os' ,'ua',
@@ -112,6 +129,7 @@ $( document ).ready(function(){
                    'lc_api_cn_n1_ping', 'lc_api_cn_e1_ping', 'lc_api_us_w1_ping',
                    'lc_app_router_ping', 'lc_push_router_ping',
                    'qiniu_up_ping', 'qbox_up_ping',
+                   'wss_cn_n1_ping', 'wss_cn_n1_ping',
                    '163_ping', 'sina_ping', 'baidu_ping'];
 
   function saveReport(){
