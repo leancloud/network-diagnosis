@@ -121,6 +121,7 @@ $( document ).ready(function(){
     pingDomain('https://www.baidu.com/', '#baidu_ping');
 
     pingWSS('wss://cn-n1-cell1.leancloud.cn', '#wss_cn_n1_ping');
+    pingWSS('wss://cn-e1-cell2.leancloud.cn', '#wss_cn_e1_ping');
     pingWSS('wss://us-w1-core-mesos-cell-3.leancloud.cn:5799/', '#wss_us_w1_ping');
   }
 
@@ -129,7 +130,7 @@ $( document ).ready(function(){
                    'lc_api_cn_n1_ping', 'lc_api_cn_e1_ping', 'lc_api_us_w1_ping',
                    'lc_app_router_ping', 'lc_push_router_ping',
                    'qiniu_up_ping', 'qbox_up_ping',
-                   'wss_cn_n1_ping', 'wss_cn_n1_ping',
+                   'wss_cn_n1_ping', 'wss_cn_n1_ping', 'wss_cn_e1_ping',
                    '163_ping', 'sina_ping', 'baidu_ping'];
 
   function saveReport(){
