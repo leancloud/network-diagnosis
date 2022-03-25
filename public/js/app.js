@@ -116,6 +116,10 @@ $( document ).ready(function(){
     pingDomain('http://up.qiniu.com/', '#qiniu_up_ping');
     pingDomain('https://up.qbox.me/', '#qbox_up_ping');
 
+    pingDomain('https://tds-tapsdk.cn.tapapis.com', '#tds_cn_eco_ping');
+    pingDomain('https://xyz.cloud.tds1.tapapis.cn/1.1/ping', '#tds_cn_cloud_ping');
+    pingDomain('https://xyz.cloud.ap-sg.tapapis.com/1.1/ping', '#tds_sg_cloud_ping');
+
     pingDomain('http://www.163.com/', '#163_ping');
     pingDomain('http://www.sina.com.cn/', '#sina_ping');
     pingDomain('https://www.baidu.com/', '#baidu_ping');
