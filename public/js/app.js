@@ -91,11 +91,11 @@ $( document ).ready(function(){
     }
 
     function pingWSS(site, selector) {
-      var start = Date.parse(new Date());
+      var start = Date.now();
 
       websocket = new WebSocket(site);
       websocket.onopen = function(evt) {
-        var end = Date.parse(new Date());
+        var end = Date.now();
         console.log("start: " + start + ", end: " + end);
         $(selector).text('正常，延迟 ' + (end - start) + ' 毫秒');
       };
@@ -125,8 +125,11 @@ $( document ).ready(function(){
     pingDomain('https://www.baidu.com/', '#baidu_ping');
 
     pingWSS('wss://cn-n1-cell1.leancloud.cn', '#wss_cn_n1_ping');
-    pingWSS('wss://cn-e1-cell2.leancloud.cn', '#wss_cn_e1_ping');
-    pingWSS('wss://us-w1-core-mesos-cell-3.leancloud.cn:5799/', '#wss_us_w1_ping');
+    pingWSS('wss://xyz.rtm.lncldapi.com', '#wss_cn_e1_ping');
+    pingWSS('wss://xyz.rtm.lncldglobal.com', '#wss_us_w1_ping');
+
+    pingWSS('wss://xyz.im.tds1.tapapis.cn', '#tds_cn_wss_ping');
+    pingWSS('wss://xyz.im.ap-sg.tapapis.com', '#tds_sg_wss_ping');
   }
 
   var selectors = ["ip", 'location', 'browser', 'os' ,'ua',
