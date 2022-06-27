@@ -113,7 +113,7 @@ $( document ).ready(function(){
     pingDomain('https://router-g0-push.leancloud.cn/v1/route?appId=PXnN5AqVpgEI4esrTLhoxUkd-gzGzoHsz', '#lc_push_router_ping');
     pingDomain('https://app-router.leancloud.cn/1/route?appId=test', '#lc_app_router_ping');
 
-    pingDomain('http://up.qiniu.com/', '#qiniu_up_ping');
+    pingDomain('https://upload.qiniup.com/', '#qiniu_up_ping');
     pingDomain('https://up.qbox.me/', '#qbox_up_ping');
 
     pingDomain('https://tds-tapsdk.cn.tapapis.com', '#tds_cn_eco_ping');
