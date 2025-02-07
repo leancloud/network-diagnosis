@@ -51,17 +51,15 @@ function getLocation(ip, cb ) {
   }
 }
 
+function getRealIp(req) {
+  return (req.headers['x-forwarded-for'] || '').split(',').shift().trim() ||
+           req.socket.remoteAddress
+}
+
 app.get('/', function(req, res) {
-  var ip = req.headers['x-real-ip'];
-  if(ip) {
-    getLocation(ip, function(location) {
-      res.render('index', { ip:  ip,
-                            location: location});
-    });
-  } else {
-    res.render('index', { ip:  ip || 'unknown',
-                          location: 'unknown'});
-  }
+  var ip = getRealIp(req)
+  res.render('index', { ip:  ip || 'unknown',
+                        location: 'unknown'});
 });
 
 app.post('/save', function(req, res) {
